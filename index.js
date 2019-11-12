@@ -13,10 +13,12 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var _default = function _default() {
+var Credits = function Credits(_ref) {
+  var heading = _ref.heading;
+
   var printCredits = function printCredits() {
     console.clear();
-    console.log("%cDesign and Development", "font-size: 22px; font-weight: bold; color: rgb(0, 231, 192);");
+    console.log("%c", heading, "font-size: 22px; font-weight: bold; color: rgb(0, 231, 192);");
     console.log("%cby Florian Nebenfuehr \nwww.nebenfuehr.today", "font-size: 14px;");
   };
 
@@ -26,4 +28,8 @@ var _default = function _default() {
   return null;
 };
 
+Credits.defaultProps = {
+  heading: "Desgin and Development"
+};
+var _default = Credits;
 exports["default"] = _default;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const Credits ({ heading }) => {
+const Credits = ({ heading }) => {
   const printCredits = () => {
     console.clear();
     console.log(
@@ -21,4 +21,4 @@ Credits.defaultProps = {
   heading: "Desgin and Development"
 };
 
-export default Credits
+export default Credits;
