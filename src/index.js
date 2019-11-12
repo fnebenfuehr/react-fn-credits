@@ -4,8 +4,7 @@ const Credits = ({ heading }) => {
   const printCredits = () => {
     console.clear();
     console.log(
-      "%c",
-      heading,
+      "%c" + heading,
       "font-size: 22px; font-weight: bold; color: rgb(0, 231, 192);"
     );
     console.log(
